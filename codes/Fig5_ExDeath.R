@@ -58,9 +58,9 @@ for(i in 1:47){
 }
 
 
-dx_fut_pref%>%readr::write_csv(file="CODES/data/dx_fut_pref.csv")
+dx_fut_pref%>%readr::write_csv(file="CODES/RESULTS/dx_fut_pref.csv")
 
-dx_fut_pref<-readr::read_csv(file="CODES/data/dx_fut_pref.csv")
+dx_fut_pref<-readr::read_csv(file="CODES/RESULTS/dx_fut_pref.csv")
 
 
 library(ggplot2)
