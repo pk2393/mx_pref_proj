@@ -85,9 +85,9 @@ le_cf_pref%<>%
          gap_2022_lwr = y2022_obs - y2022_upr
   )
 
-le_cf_pref %>% readr::write_csv(file="CODES/data/le_cf_pref.csv")
+le_cf_pref %>% readr::write_csv(file="CODES/RESULTS/le_cf_pref.csv")
 
-readr::read_csv(file="CODES/data/le_cf_pref.csv") -> le_df_pref
+readr::read_csv(file="CODES/RESULTS/le_cf_pref.csv") -> le_df_pref
 
 
 
