@@ -29,8 +29,8 @@ for(i in 1:47){
   idx_pref_start = (i-1)*66 +1
   idx_pref_end = i*66
   
-  for(year in 2020:2022){
-    idx_start = idx_pref_start+(year-2020)*22
+  for(y in 2020:2022){
+    idx_start = idx_pref_start+(y-2020)*22
     idx_end = idx_start+21
     
     mx_cf_draws[, c(idx_start:idx_end)] %>% 
@@ -41,8 +41,8 @@ for(i in 1:47){
     etr_vec <- (etr_pref%>%filter(Year == y))$Total
     mx_obs <- pmax(1e-5, c(death_vec[1:21], sum(death_vec[22:24])) / c(etr_vec[1:21], sum(etr_vec[22:24])))
 
-    log(mx_obs) - log(mx_tmp) -> logmx_list[[paste0("hm", year)]][i, ]
-    mx_obs - mx_tmp -> mx_list[[paste0("hm", year)]][i, ]
+    log(mx_obs) - log(mx_tmp) -> logmx_list[[paste0("hm", y)]][i, ]
+    mx_obs - mx_tmp -> mx_list[[paste0("hm", y)]][i, ]
   }
 }
 
