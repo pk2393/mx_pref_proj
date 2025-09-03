@@ -1,5 +1,6 @@
 source("./CODES/GH_data_prep.R")
 load(file="./CODES/data/stan_result_mean1y_re2019.RData") 
+# load(file="./CODES/data/stan_result_mean5y_re2015_2019.RData")
 
 library(posterior)
 posterior_result <- as_draws_df(sampling_result)
